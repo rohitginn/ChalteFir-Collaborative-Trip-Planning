@@ -14,7 +14,10 @@ function App() {
       <div className="min-h-screen bg-neutral-50 text-neutral-900 font-sans">
         <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-neutral-200/60">
           <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <Link to="/" className="text-lg font-semibold tracking-tight text-neutral-900 pointer-events-auto">ChalteFir.</Link>
+            <Link to="/" className="flex items-center gap-2 text-lg font-semibold tracking-tight text-neutral-900 pointer-events-auto">
+              <img src="/logo.png" alt="ChalteFir Logo" className="h-6 w-6 object-contain" />
+              ChalteFir.
+            </Link>
             {user && (
               <button
                 onClick={() => { localStorage.removeItem('userInfo'); window.location.href = '/login'; }}
